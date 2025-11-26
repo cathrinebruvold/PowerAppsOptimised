@@ -11,7 +11,8 @@
       PaddingLeft: =20
       PaddingRight: =20
       PaddingTop: =20
-      Width: =Parent.Width
+      Width: =Min(Parent.Width,1900)
+      X: =(Parent.Width-Self.Width)/2
     Children:
       - HeaderContainer1:
           Control: GroupContainer@1.3.0
@@ -35,7 +36,7 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
           Children:
-            - Container1:
+            - Container1_4:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -80,7 +81,7 @@
                         LayoutMinWidth: =16
                         Text: |-
                           =$"Kundenummer: 1234567 | Fødselsnummer:123456789765 | Sist Oppdatert: 12.03.25"
-      - HeaderContainer1_1:
+      - HeaderContainer1_3:
           Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
@@ -102,7 +103,7 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
           Children:
-            - Container1_1:
+            - Container1_5:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -133,7 +134,7 @@
                         LayoutMinWidth: =16
                         Text: |-
                           ="🔧 Tilpass visning"
-                  - Container2:
+                  - Container2_1:
                       Control: GroupContainer@1.3.0
                       Variant: AutoLayout
                       Properties:
@@ -157,10 +158,10 @@
                               LayoutMaxWidth: =0
                               LayoutMinHeight: =16
                               LayoutMinWidth: =16
-                              OffText: ="Roller i norsk næringsliv"
+                              OffText: ="Shopper"
                               OnFillColor: =RGBA(0, 102, 68, 1)
-                              OnText: ="Roller i norsk næringsliv"
-                              Width: =300
+                              OnText: ="Shopper"
+                              Width: =200
                         - Toggle1_1:
                             Control: FluentV8/Toggle@1.6.7
                             Properties:
@@ -181,10 +182,10 @@
                               LayoutMaxWidth: =0
                               LayoutMinHeight: =16
                               LayoutMinWidth: =16
-                              OffText: ="Eierskap og roller (dokumenter)"
+                              OffText: ="Møbler"
                               OnFillColor: =RGBA(0, 102, 68, 1)
-                              OnText: ="Eierskap og roller (dokumenter)"
-                              Width: =350
+                              OnText: ="Møbler"
+                              Width: =200
                         - Toggle1_3:
                             Control: FluentV8/Toggle@1.6.7
                             Properties:
@@ -194,10 +195,10 @@
                               LayoutMaxWidth: =0
                               LayoutMinHeight: =16
                               LayoutMinWidth: =16
-                              OffText: ="Internasjonal bruk av banken"
+                              OffText: ="Internasjonal kunde"
                               OnFillColor: =RGBA(0, 102, 68, 1)
-                              OnText: ="Internasjonal bruk av banken"
-      - HeaderContainer1_2:
+                              OnText: ="Internasjonal kunde"
+      - HeaderContainer1_4:
           Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
@@ -219,7 +220,7 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
           Children:
-            - Container2_1:
+            - Container2_3:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -246,7 +247,7 @@
                   X: =40
                   Y: =40
                 Children:
-                  - Label2:
+                  - Label2_2:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         Alignment: =Align.Center
@@ -258,7 +259,7 @@
                         Text: |-
                           ="🎯"
                         Width: =35
-                  - Label2_1:
+                  - Label2_5:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         FontSize: =14
@@ -268,7 +269,7 @@
                         LayoutMinWidth: =16
                         Text: ="Oversikt"
                         Width: =80
-            - Container2_2:
+            - Container2_4:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -295,7 +296,7 @@
                   X: =40
                   Y: =40
                 Children:
-                  - Label2_2:
+                  - Label2_6:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         Alignment: =Align.Center
@@ -306,7 +307,7 @@
                         LayoutMinWidth: =16
                         Text: ="✨"
                         Width: =35
-                  - Label2_3:
+                  - Label2_10:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         FontSize: =14
@@ -316,7 +317,7 @@
                         LayoutMinWidth: =16
                         Text: ="Kundeinformasjon"
                         Width: =160
-            - Container2_3:
+            - Container2_5:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -343,7 +344,7 @@
                   X: =40
                   Y: =40
                 Children:
-                  - Label2_4:
+                  - Label2_11:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         Alignment: =Align.Center
@@ -355,7 +356,7 @@
                         Text: |-
                           ="💰"
                         Width: =35
-                  - Label2_5:
+                  - Label2_12:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         FontSize: =14
@@ -365,7 +366,7 @@
                         LayoutMinWidth: =16
                         Text: ="Økonomi & Eierskap"
                         Width: =190
-            - Container2_4:
+            - Container2_6:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -392,7 +393,7 @@
                   X: =40
                   Y: =40
                 Children:
-                  - Label2_6:
+                  - Label2_13:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         Alignment: =Align.Center
@@ -403,7 +404,7 @@
                         LayoutMinWidth: =16
                         Text: ="⚠️"
                         Width: =35
-                  - Label2_7:
+                  - Label2_14:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         FontSize: =14
@@ -411,9 +412,9 @@
                         LayoutMaxWidth: =0
                         LayoutMinHeight: =16
                         LayoutMinWidth: =16
-                        Text: ="AML/KYC"
+                        Text: ="Varsel"
                         Width: =100
-            - Container2_5:
+            - Container2_7:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -440,7 +441,7 @@
                   X: =40
                   Y: =40
                 Children:
-                  - Label2_8:
+                  - Label2_15:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         Alignment: =Align.Center
@@ -452,7 +453,7 @@
                         Text: |-
                           ="📂"
                         Width: =35
-                  - Label2_9:
+                  - Label2_16:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         FontSize: =14
@@ -527,9 +528,9 @@
                   LayoutMaxWidth: =0
                   LayoutMinHeight: =16
                   LayoutMinWidth: =16
-                  Text: ="Kunde har høy risikoprofil. ODD-gjennomgang må gjennomføres innen 30 dager."
+                  Text: ="Kunde handler alt for lite hos oss... Mer markedsføring!"
                   Width: =180
-      - HeaderContainer1_3:
+      - HeaderContainer1_5:
           Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
@@ -551,7 +552,7 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
           Children:
-            - Container2_6:
+            - Container2_8:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -577,7 +578,7 @@
                   X: =40
                   Y: =40
                 Children:
-                  - Label2_10:
+                  - Label2_17:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -591,7 +592,7 @@
                         LayoutMinWidth: =16
                         Text: ="2"
                         Width: =35
-                  - Label2_11:
+                  - Label2_18:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -603,7 +604,7 @@
                         LayoutMinWidth: =16
                         Text: ="Aktive kontoer"
                         Width: =80
-            - Container2_7:
+            - Container2_9:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -629,7 +630,7 @@
                   X: =40
                   Y: =40
                 Children:
-                  - Label2_12:
+                  - Label2_19:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -643,7 +644,7 @@
                         LayoutMinWidth: =16
                         Text: ="4.2M"
                         Width: =35
-                  - Label2_13:
+                  - Label2_20:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -653,9 +654,9 @@
                         LayoutMaxWidth: =0
                         LayoutMinHeight: =16
                         LayoutMinWidth: =16
-                        Text: ="Totalt innetående (NOK)"
+                        Text: ="Beløp"
                         Width: =160
-            - Container2_8:
+            - Container2_10:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -681,7 +682,7 @@
                   X: =40
                   Y: =40
                 Children:
-                  - Label2_14:
+                  - Label2_21:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -693,9 +694,9 @@
                         LayoutMaxWidth: =0
                         LayoutMinHeight: =16
                         LayoutMinWidth: =16
-                        Text: ="Høy"
+                        Text: ="Greit"
                         Width: =35
-                  - Label2_15:
+                  - Label2_22:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -707,108 +708,6 @@
                         LayoutMinWidth: =16
                         Text: ="Risikoprofil"
                         Width: =190
-            - Container2_9:
-                Control: GroupContainer@1.3.0
-                Variant: AutoLayout
-                Properties:
-                  AlignInContainer: =AlignInContainer.Center
-                  Fill: =RGBA(255, 255, 255, 1)
-                  Height: =80
-                  LayoutAlignItems: =LayoutAlignItems.Center
-                  LayoutDirection: =LayoutDirection.Vertical
-                  LayoutJustifyContent: =LayoutJustifyContent.Center
-                  LayoutMaxHeight: =0
-                  LayoutMaxWidth: =0
-                  LayoutMinHeight: =16
-                  LayoutMinWidth: =16
-                  PaddingBottom: =8
-                  PaddingLeft: =8
-                  PaddingRight: =8
-                  PaddingTop: =8
-                  RadiusBottomLeft: =8
-                  RadiusBottomRight: =8
-                  RadiusTopLeft: =8
-                  RadiusTopRight: =8
-                  Width: =170
-                  X: =40
-                  Y: =40
-                Children:
-                  - Label2_16:
-                      Control: FluentV8/Label@1.8.6
-                      Properties:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Alignment: =Align.Center
-                        FontSize: =14
-                        FontWeight: =FontWeight.Bold
-                        LayoutMaxHeight: =0
-                        LayoutMaxWidth: =0
-                        LayoutMinHeight: =16
-                        LayoutMinWidth: =16
-                        Text: ="12.11.2025"
-                        Width: =35
-                  - Label2_17:
-                      Control: FluentV8/Label@1.8.6
-                      Properties:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Alignment: =Align.Center
-                        FontSize: =14
-                        LayoutMaxHeight: =0
-                        LayoutMaxWidth: =0
-                        LayoutMinHeight: =16
-                        LayoutMinWidth: =16
-                        Text: ="Siste risikovurdering"
-                        Width: =100
-            - Container2_10:
-                Control: GroupContainer@1.3.0
-                Variant: AutoLayout
-                Properties:
-                  AlignInContainer: =AlignInContainer.Center
-                  Fill: =RGBA(255, 255, 255, 1)
-                  Height: =80
-                  LayoutAlignItems: =LayoutAlignItems.Center
-                  LayoutDirection: =LayoutDirection.Vertical
-                  LayoutJustifyContent: =LayoutJustifyContent.Center
-                  LayoutMaxHeight: =0
-                  LayoutMaxWidth: =0
-                  LayoutMinHeight: =16
-                  LayoutMinWidth: =16
-                  PaddingBottom: =8
-                  PaddingLeft: =8
-                  PaddingRight: =8
-                  PaddingTop: =8
-                  RadiusBottomLeft: =8
-                  RadiusBottomRight: =8
-                  RadiusTopLeft: =8
-                  RadiusTopRight: =8
-                  Width: =170
-                  X: =40
-                  Y: =40
-                Children:
-                  - Label2_18:
-                      Control: FluentV8/Label@1.8.6
-                      Properties:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Alignment: =Align.Center
-                        FontSize: =14
-                        FontWeight: =FontWeight.Bold
-                        LayoutMaxHeight: =0
-                        LayoutMaxWidth: =0
-                        LayoutMinHeight: =16
-                        LayoutMinWidth: =16
-                        Text: ="12.11.2024"
-                        Width: =35
-                  - Label2_19:
-                      Control: FluentV8/Label@1.8.6
-                      Properties:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Alignment: =Align.Center
-                        FontSize: =14
-                        LayoutMaxHeight: =0
-                        LayoutMaxWidth: =0
-                        LayoutMinHeight: =16
-                        LayoutMinWidth: =16
-                        Text: ="Siste kundekontroll"
-                        Width: =80
             - Container2_11:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
@@ -835,7 +734,109 @@
                   X: =40
                   Y: =40
                 Children:
-                  - Label2_20:
+                  - Label2_23:
+                      Control: FluentV8/Label@1.8.6
+                      Properties:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Alignment: =Align.Center
+                        FontSize: =14
+                        FontWeight: =FontWeight.Bold
+                        LayoutMaxHeight: =0
+                        LayoutMaxWidth: =0
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="12.11.2025"
+                        Width: =35
+                  - Label2_24:
+                      Control: FluentV8/Label@1.8.6
+                      Properties:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Alignment: =Align.Center
+                        FontSize: =14
+                        LayoutMaxHeight: =0
+                        LayoutMaxWidth: =0
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="Siste risikovurdering"
+                        Width: =100
+            - Container2_12:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.Center
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =80
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutJustifyContent: =LayoutJustifyContent.Center
+                  LayoutMaxHeight: =0
+                  LayoutMaxWidth: =0
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  PaddingBottom: =8
+                  PaddingLeft: =8
+                  PaddingRight: =8
+                  PaddingTop: =8
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =170
+                  X: =40
+                  Y: =40
+                Children:
+                  - Label2_25:
+                      Control: FluentV8/Label@1.8.6
+                      Properties:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Alignment: =Align.Center
+                        FontSize: =14
+                        FontWeight: =FontWeight.Bold
+                        LayoutMaxHeight: =0
+                        LayoutMaxWidth: =0
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="12.11.2024"
+                        Width: =35
+                  - Label2_26:
+                      Control: FluentV8/Label@1.8.6
+                      Properties:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Alignment: =Align.Center
+                        FontSize: =14
+                        LayoutMaxHeight: =0
+                        LayoutMaxWidth: =0
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Text: ="Siste kundekontakt"
+                        Width: =80
+            - Container2_13:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.Center
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =80
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutJustifyContent: =LayoutJustifyContent.Center
+                  LayoutMaxHeight: =0
+                  LayoutMaxWidth: =0
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  PaddingBottom: =8
+                  PaddingLeft: =8
+                  PaddingRight: =8
+                  PaddingTop: =8
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =170
+                  X: =40
+                  Y: =40
+                Children:
+                  - Label2_27:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -848,7 +849,7 @@
                         LayoutMinWidth: =16
                         Text: ="NEI"
                         Width: =35
-                  - Label2_21:
+                  - Label2_28:
                       Control: FluentV8/Label@1.8.6
                       Properties:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -858,9 +859,9 @@
                         LayoutMaxWidth: =0
                         LayoutMinHeight: =16
                         LayoutMinWidth: =16
-                        Text: ="PEP-status"
+                        Text: ="Gull-Status"
                         Width: =80
-      - HeaderContainer1_4:
+      - HeaderContainer1_6:
           Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
@@ -883,7 +884,7 @@
             X: =40
             Y: =40
           Children:
-            - Container1_2:
+            - Container1_9:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -916,7 +917,7 @@
                         LayoutMaxWidth: =0
                         LayoutMinHeight: =16
                         LayoutMinWidth: =16
-                        Text: ="Risikoscore - Sammendrag"
+                        Text: ="Sammendrag"
                   - Rectangle2:
                       Control: Rectangle@2.3.0
                       Properties:
@@ -972,9 +973,9 @@
                               LayoutMaxWidth: =0
                               LayoutMinHeight: =16
                               LayoutMinWidth: =16
-                              Text: ="⚠️ Se detaljert oversikt i AML/KYC-fanen"
+                              Text: ="⚠️ Se detaljert oversikt i Annet-fanen"
                               Width: =180
-            - Container1_3:
+            - Container1_10:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
@@ -990,7 +991,7 @@
                   RadiusTopLeft: =8
                   RadiusTopRight: =8
                 Children:
-                  - Container1_4:
+                  - Container1_11:
                       Control: GroupContainer@1.3.0
                       Variant: AutoLayout
                       Properties:
@@ -1024,7 +1025,7 @@
                               LayoutMaxWidth: =0
                               LayoutMinHeight: =16
                               LayoutMinWidth: =16
-                              Text: ="ODD - Oppdatert due diligence"
+                              Text: ="Siste kjøp"
                         - Rectangle2_1:
                             Control: Rectangle@2.3.0
                             Properties:
@@ -1043,201 +1044,3 @@
                               LayoutMinWidth: =16
                               PressedFill: =RGBA(0, 0, 0, 0)
                               Width: =Parent.Width*0.95
-                        - Gallery1:
-                            Control: Gallery@2.15.0
-                            Variant: BrowseLayout_Vertical_TwoTextVariant_pcfCore
-                            Properties:
-                              BorderColor: =RGBA(166, 166, 166, 1)
-                              FillPortions: =0
-                              FocusedBorderColor: =RGBA(0, 120, 212, 1)
-                              FocusedBorderThickness: =2
-                              Height: |-
-                                =Parent.Height
-                                *0.8
-                              Items: =
-                              ShowScrollbar: =false
-                              TemplateSize: |+
-                                =Parent.Height
-                            Children:
-                              - Rectangle4:
-                                  Control: Rectangle@2.3.0
-                                  Properties:
-                                    BorderColor: =RGBA(166, 166, 166, 1)
-                                    DisabledFill: =RGBA(0,0,0,0)
-                                    Fill: =RGBA(0, 102, 68, 1)
-                                    FocusedBorderColor: =RGBA(0, 120, 212, 1)
-                                    Height: =1
-                                    HoverFill: =RGBA(0,0,0,0)
-                                    OnSelect: =Select(Parent)
-                                    PressedFill: =RGBA(0,0,0,0)
-                                    TabIndex: =0
-                                    Width: =Parent.TemplateWidth
-                                    Y: =44
-                              - Title2:
-                                  Control: FluentV8/Label@1.8.6
-                                  Properties:
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =38
-                                    OnSelect: =Select(Parent)
-                                    TabIndex: =-1
-                                    Text: =ThisItem.'AWS Search Results'
-                                    VerticalAlignment: =VerticalAlign.Top
-                                    Width: =139
-                                    X: =485
-                                    Y: =6
-                              - Subtitle2:
-                                  Control: FluentV8/Label@1.8.6
-                                  Properties:
-                                    AutoHeight: =true
-                                    FontSize: =12
-                                    FontWeight: =FontWeight.Normal
-                                    Height: =44
-                                    OnSelect: =Select(Parent)
-                                    TabIndex: =-1
-                                    Text: ="Siste ODD gjennomført"
-                                    VerticalAlignment: =VerticalAlign.Top
-                                    Width: =311
-                                    Y: =7
-                              - Rectangle4_1:
-                                  Control: Rectangle@2.3.0
-                                  Properties:
-                                    BorderColor: =RGBA(166, 166, 166, 1)
-                                    DisabledFill: =RGBA(0,0,0,0)
-                                    Fill: =RGBA(0, 102, 68, 1)
-                                    FocusedBorderColor: =RGBA(0, 120, 212, 1)
-                                    Height: =1
-                                    HoverFill: =RGBA(0,0,0,0)
-                                    OnSelect: =Select(Parent)
-                                    PressedFill: =RGBA(0,0,0,0)
-                                    TabIndex: =0
-                                    Width: =Parent.TemplateWidth
-                                    Y: =108
-                              - Subtitle2_2:
-                                  Control: FluentV8/Label@1.8.6
-                                  Properties:
-                                    AutoHeight: =true
-                                    FontSize: =12
-                                    FontWeight: =FontWeight.Normal
-                                    Height: =44
-                                    OnSelect: =Select(Parent)
-                                    TabIndex: =-1
-                                    Text: ="Gjennomført av"
-                                    VerticalAlignment: =VerticalAlign.Top
-                                    Width: =311
-                                    Y: =71
-                              - Rectangle4_2:
-                                  Control: Rectangle@2.3.0
-                                  Properties:
-                                    BorderColor: =RGBA(166, 166, 166, 1)
-                                    DisabledFill: =RGBA(0,0,0,0)
-                                    Fill: =RGBA(0, 102, 68, 1)
-                                    FocusedBorderColor: =RGBA(0, 120, 212, 1)
-                                    Height: =1
-                                    HoverFill: =RGBA(0,0,0,0)
-                                    OnSelect: =Select(Parent)
-                                    PressedFill: =RGBA(0,0,0,0)
-                                    TabIndex: =0
-                                    Width: =Parent.TemplateWidth
-                                    Y: =167
-                              - Title2_1:
-                                  Control: FluentV8/Label@1.8.6
-                                  Properties:
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =38
-                                    OnSelect: =Select(Parent)
-                                    TabIndex: =-1
-                                    Text: =ThisItem.'AWS Search Results'
-                                    VerticalAlignment: =VerticalAlign.Top
-                                    Width: =139
-                                    X: =485
-                                    Y: =129
-                              - Subtitle2_1:
-                                  Control: FluentV8/Label@1.8.6
-                                  Properties:
-                                    AutoHeight: =true
-                                    FontSize: =12
-                                    FontWeight: =FontWeight.Normal
-                                    Height: =44
-                                    OnSelect: =Select(Parent)
-                                    TabIndex: =-1
-                                    Text: ="Neste ODD frist"
-                                    VerticalAlignment: =VerticalAlign.Top
-                                    Width: =311
-                                    Y: =130
-                              - Rectangle4_3:
-                                  Control: Rectangle@2.3.0
-                                  Properties:
-                                    BorderColor: =RGBA(166, 166, 166, 1)
-                                    DisabledFill: =RGBA(0,0,0,0)
-                                    Fill: =RGBA(0, 102, 68, 1)
-                                    FocusedBorderColor: =RGBA(0, 120, 212, 1)
-                                    Height: =1
-                                    HoverFill: =RGBA(0,0,0,0)
-                                    OnSelect: =Select(Parent)
-                                    PressedFill: =RGBA(0,0,0,0)
-                                    TabIndex: =0
-                                    Width: =Parent.TemplateWidth
-                                    Y: =237
-                              - Title2_2:
-                                  Control: FluentV8/Label@1.8.6
-                                  Properties:
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =38
-                                    OnSelect: =Select(Parent)
-                                    TabIndex: =-1
-                                    Text: =ThisItem.'AWS Search Results'
-                                    VerticalAlignment: =VerticalAlign.Top
-                                    Width: =139
-                                    X: =485
-                                    Y: =199
-                              - Subtitle2_3:
-                                  Control: FluentV8/Label@1.8.6
-                                  Properties:
-                                    AutoHeight: =true
-                                    FontSize: =12
-                                    FontWeight: =FontWeight.Normal
-                                    Height: =44
-                                    OnSelect: =Select(Parent)
-                                    TabIndex: =-1
-                                    Text: ="ODD-nivå"
-                                    VerticalAlignment: =VerticalAlign.Top
-                                    Width: =311
-                                    Y: =200
-                              - Rectangle4_4:
-                                  Control: Rectangle@2.3.0
-                                  Properties:
-                                    BorderColor: =RGBA(166, 166, 166, 1)
-                                    DisabledFill: =RGBA(0,0,0,0)
-                                    Fill: =RGBA(0, 102, 68, 1)
-                                    FocusedBorderColor: =RGBA(0, 120, 212, 1)
-                                    Height: =1
-                                    HoverFill: =RGBA(0,0,0,0)
-                                    OnSelect: =Select(Parent)
-                                    PressedFill: =RGBA(0,0,0,0)
-                                    TabIndex: =0
-                                    Width: =Parent.TemplateWidth
-                                    Y: =308
-                              - Subtitle2_4:
-                                  Control: FluentV8/Label@1.8.6
-                                  Properties:
-                                    AutoHeight: =true
-                                    FontSize: =12
-                                    FontWeight: =FontWeight.Normal
-                                    Height: =44
-                                    OnSelect: =Select(Parent)
-                                    TabIndex: =-1
-                                    Text: ="Status"
-                                    VerticalAlignment: =VerticalAlign.Top
-                                    Width: =311
-                                    Y: =271
-                              - ButtonCanvas1:
-                                  Control: Button@0.0.45
-                                  Properties:
-                                    BasePaletteColor: =RGBA(8, 222, 8, 1)
-                                    BorderRadius: =10
-                                    Height: =35
-                                    OnSelect: =Select(Parent)
-                                    Text: ="Godkjent"
-                                    VerticalAlign: =VerticalAlign.Middle
-                                    X: =485
-                                    Y: =257
