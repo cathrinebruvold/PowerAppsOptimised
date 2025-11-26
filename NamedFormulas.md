@@ -500,19 +500,6 @@ nfData = Table(
     }
 );
 
-nfAdminUser =
-    
-       LookUp(
-        [@'Security Roles'],
-        "System Administrator" in Name,
-        Role
-    ) in Concat(
-        LookUp(
-            [@Users],
-            'Primary Email' = User().Email
-        ).'Security Roles (systemuserroles_association)',
-        Role & ";"
-    );
 
     
     /* If(LookUp(
